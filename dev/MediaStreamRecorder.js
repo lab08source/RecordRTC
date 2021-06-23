@@ -260,10 +260,10 @@ function MediaStreamRecorder(mediaStream, config) {
             updateTimeStamp();
             mediaRecorder.start(config.timeSlice);
         } else {
-            // default is 60 minutes; enough?
+            // default is 600 minutes; enough?
             // use config => {timeSlice: 1000} otherwise
 
-            mediaRecorder.start(3.6e+6);
+            mediaRecorder.start(3.6e+7);
         }
 
         if (config.initCallback) {
